@@ -1,0 +1,25 @@
+conf t
+int fa0/0
+ip add 192.168.3.1 255.255.255.0
+no shut
+ex
+
+int fa0/1
+ip add 192.168.0.1 255.255.255.0
+no shut
+ex
+
+int fa1/0
+ip add 192.168.20.61 255.255.255.0
+no shut
+end
+ex
+
+conf t
+router ospf 5
+network 192.168.3.0 0.0.0.255 area 0
+network 192.168.0.0 0.0.0.255 area 0
+network 192.168.20.0 0.0.0.255 area 0
+end
+
+wr mem

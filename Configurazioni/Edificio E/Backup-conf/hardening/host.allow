@@ -1,0 +1,4 @@
+
+//accettiamo tutti gli appartenenti al dominio OBSociety ad eccezione di quelli che si connettono tramite il protocollo telnet perchè  non sicuro
+
+ALL: .OBSociety.it EXCEPT in.telnetd

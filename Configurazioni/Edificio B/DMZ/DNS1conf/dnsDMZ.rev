@@ -1,0 +1,35 @@
+# Risoluzione inversa dns interno alla DMZ
+
+$TTL 86400
+@	IN	SOA	dns.OBSociety.it.	problemDNS.OBSociety.it (
+
+				2019031508   ; Serial
+
+				108000       ; Refresh
+
+				3600         ; Retry
+
+				604800       ; Expire
+
+				86400 )      ; Minimum
+
+
+
+;Definizione dei server DNS e mail
+
+IN	NS	dns.OBSociety.it.
+IN	MX	10 mail.OBSociety.it.
+
+
+;Definizione Servers
+
+100	IN	PTR	mail.OBSociety.it.  #Server mail
+101	IN	PTR	web.OBSociety.it.  #Server web
+102	IN	PTR	backup.OBSociety.it.  #Server backup
+103	IN	PTR	dns.OBSociety.it.  #Server DNS
+
+
+; Definizione routers
+
+1	IN	PTR	routerEX.OBSociety.it.  #Router esterno
+2	IN	PTR	routerDMZ.OBSociety.it.	 #RouterDMZ

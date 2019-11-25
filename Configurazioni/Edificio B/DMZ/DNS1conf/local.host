@@ -1,0 +1,17 @@
+# Risoluzione localhost
+
+$TTL 86400
+@	IN	SOA	@	root (
+
+				2019031508   ; Serial
+
+				108000       ; Refresh
+
+				3600         ; Retry
+
+				604800       ; Expire
+
+				86400 )      ; Minimum
+
+@	86400	IN  	NS	@
+	86400	IN	A	127.0.0.1

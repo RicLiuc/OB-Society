@@ -1,0 +1,22 @@
+$TTL 86400
+$ORIGIN amministrazione.OBSociety.it ;
+@	IN	SOA	dns.design.OBSociety.it.	manuel_chiodi.OBSociety.it (
+				2019031903   ; serial
+				108000       ; refresh
+				3600         ; retry
+				604800       ; expire
+				86400 )      ; minimum
+
+; DNS e mail
+	IN	NS	dns.design.OBSociety.it.
+	IN	MX	50 mail.OBSociety.it.
+
+; Servers
+	100	IN	PTR	AZ.amministrazione.OBSociety.it
+
+; Router
+	1	IN	PTR	routerA.amministrazione.OBSociety.it
+
+; Hosts
+	5	IN	PTR	hostA1.amministrazione.OBSociety.it
+	55	IN	PTR	hostA50.amministrazione.OBSociety.it

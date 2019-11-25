@@ -1,0 +1,26 @@
+$TTL 86400
+$ORIGIN eladati.OBSociety.it ;
+@	IN	SOA	dns.design.OBSociety.it.	manuel_chiodi.OBSociety.it (
+				2019031903   ; serial
+				108000       ; refresh
+				3600         ; retry
+				604800       ; expire
+				86400 )      ; minimum
+
+; DNS e mail
+	IN	NS	dns.OBSociety.it.
+	IN	NS	dns.design.OBSociety.it.
+	IN	MX	50 mail.OBSociety.it.
+
+; Web
+	www	IN	CNAME	192.168.2.101 ; server web
+
+; Servers
+	backup	IN	A	192.168.6.100
+
+; Router
+	routerE	IN	A	192.168.6.1
+
+; Hosts
+	hostE1	IN	A	192.168.6.5
+	hostE20	IN	A	192.168.6.25

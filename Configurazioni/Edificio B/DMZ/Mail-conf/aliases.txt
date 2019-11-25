@@ -1,0 +1,6 @@
+# Alias amministratori
+admin_1: manuel_chiodi@OBSociety.it
+admin_2: riccardo_lucarini@OBSociety.it
+
+# Mailing list
+admins: manuel_chiodi@OBSociety.it, riccardo_lucarini@OBSociety.it

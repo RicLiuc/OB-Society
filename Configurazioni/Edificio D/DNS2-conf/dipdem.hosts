@@ -1,0 +1,26 @@
+$TTL 86400
+$ORIGIN dipdem.OBSociety.it ;
+@	IN	SOA	dns.design.OBSociety.it.	manuel_chiodi.OBSociety.it (
+				2019031903   ; serial
+				108000       ; refresh
+				3600         ; retry
+				604800       ; expire
+				86400 )      ; minimum
+
+; DNS e mail
+	IN	NS	dns.OBSociety.it.
+	IN	NS	dns.design.OBSociety.it.
+	IN	MX	50 mail.OBSociety.it.
+
+; Web
+	www	IN	CNAME	192.168.2.101 ; server web
+
+; Servers
+	dhcp	IN	A	192.168.1.100
+
+; Router
+	routerB	IN	A	192.168.1.1
+
+; Hosts
+	hostB1	IN	A	192.168.1.5
+	hostB100	IN	A	192.168.1.105

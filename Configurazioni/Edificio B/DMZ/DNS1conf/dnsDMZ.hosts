@@ -1,0 +1,39 @@
+#Zone file per il DNS interno alla DMZ
+
+$TTL 864000
+
+
+
+@	IN	SOA	dns.OBSociety.it.	problemDNS.OBSociety.it (
+
+				2019031508   ; Serial
+
+				108000       ; Refresh
+
+				3600         ; Retry
+
+				604800       ; Expire
+
+				86400 )      ; Minimum
+
+
+
+;Definizione dei server DNS e mail
+
+IN	NS	dns.OBSociety.it.
+IN	MX	10 mail.OBSociety.it.
+
+
+;Definizione Servers
+
+mail	IN	A	192.168.2.100  #Server mail
+web	IN	A	192.168.2.101  #Server web
+www	IN	CNAME	web       #Alias server web
+backup	IN A    192.168.2.102  #Server backup
+dns 	IN	A	192.168.2.103  #Server DNS
+
+
+; Definizione router
+
+routerEX	IN	A	192.168.2.1  #Router esterno
+routerDMZ	IN A 192.168.2.2	 #RouterDMZ
